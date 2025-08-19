@@ -6,33 +6,67 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <title>麺匠しんば</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
 </head>
+
 <body>
   <header id="header">
-    <div class="header-inner">
-      <nav class="nav-left">
-        <a href="#">HISTORY</a>
-        <a href="#">メニュー</a>
-      </nav>
-      <div class="logo">
-        <img src="logo/header-logo.png" alt="麺匠しんば">
-      </div>
-      <nav class="nav-right">
-        <a href="#"><img src="logo/instagram.png" alt="Instagram"></a>
-        <a href="#"><img src="logo/x.png" alt="Twitter"></a>
-        <a href="#"><img src="logo/facebook.png" alt="Facebook"></a>
-      </nav>
+  <div class="header-inner">
+    <nav class="nav-left">
+      <a href="history.html">HISTORY</a>
+      <a href="menu.html">MENU</a>
+    </nav>
+
+    <div class="logo">
+      <a href="index.html"><img src="logo/header-logo.png" alt="麺匠しんば"></a>
     </div>
-  </header>
+
+    <!-- ハンバーガー -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav class="nav-right">
+      <a href="https://instagram.com/" target="_blank"><img src="logo/instagram.png" alt="Instagram"></a>
+      <a href="https://twitter.com/" target="_blank"><img src="logo/x.png" alt="Twitter"></a>
+      <a href="https://facebook.com/" target="_blank"><img src="logo/facebook.png" alt="Facebook"></a>
+    </nav>
+  </div>
+
+  <!-- ハンバーガーメニュー -->
+  <nav class="hamburger-menu" id="hamburger-menu">
+      <button class="close-btn" id="close-btn">×</button>
+      <a href="index.html">TOP</a>
+    <a href="history.html">HISTORY</a>
+    <a href="menu.html">MENU</a>
+    <a href="https://instagram.com/" target="_blank"><img src="logo/instagram.png" alt="Instagram"></a>
+      <a href="https://twitter.com/" target="_blank"><img src="logo/x.png" alt="Twitter"></a>
+      <a href="https://facebook.com/" target="_blank"><img src="logo/facebook.png" alt="Facebook"></a>
+  </nav>
+</header>
 
   <main>
     <section class="hero wrapper">
-      <img src="photo/main.jpg" alt="メインビジュアルラーメン">
-      <div class="hours">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="photo/main.jpg"></div>
+            <div class="swiper-slide"><img src="photo/main1.jpg"></div>
+            <div class="swiper-slide"><img src="photo/main2.jpg"></div>
+            <div class="swiper-slide"><img src="photo/main3.jpg"></div>
+          </div>   
+        <div class="hours">
          <p>営業時間 11:00～15:00</p>
          <p>17:30～21:00</p>
          <p>定休日 月曜日</p>
       </div>
+    </div>
     </section>
 
     <section class="intro wrapper">
@@ -207,12 +241,13 @@
         </div>
         <div class="line-right">
           <h3 class="line-title">LINE登録で今すぐ！</h3>
-          <a href="#" class="btn">友だち追加</a>
-          <p class="line-text">
+          <a href="https://line.me/R/ti/p/@yourlineid" class="btn" target="_blank" 
+           rel="noopener noreferrer">友だち追加</a>
+          <div class="line-text">
             <p>「味玉トッピング無料サービス！」</p>
             <p>登録はカンタン：QRコードを読み取るだけ。</p>
             <p>[期間限定] 先着100名様!</p>
-          </p>
+          </div>
         </div>
         </div>
       </section>
@@ -225,12 +260,14 @@
       </div>
       <div class="footer-right">
         <nav class="socials">
-          <a href="#"><img src="logo/instagram.png" alt="Instagram"></a>
-        <a href="#"><img src="logo/x.png" alt="Twitter"></a>
-        <a href="#"><img src="logo/facebook.png" alt="Facebook"></a>
+          <a href="https://instagram.com/" target="_blank"><img src="logo/instagram.png" alt="Instagram"></a>
+        <a href="https://twitter.com/" target="_blank"><img src="logo/x.png" alt="Twitter"></a>
+        <a href="https://facebook.com/" target="_blank"><img src="logo/facebook.png" alt="Facebook"></a>
         </nav>
       </div>
     </div>
   </footer>
+        <script src="main.js"></script>
+
 </body>
 </html>
